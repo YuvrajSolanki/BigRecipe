@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1" />
+    <title>Varieties1</title>       
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="Javascript/keySelector.js"></script>
+    <script src="Javascript/Varieties1.js"></script>
+ 
+    <link href="Css/Accordian.css" rel="stylesheet" />
+    <link href="Css/ImageAccordian.css" rel="stylesheet" />
+    <link href="Css/Main.css" rel="stylesheet" />
+    <link href="Css/TabMenu.css" rel="stylesheet" />   
+ 
+</head>
+<body>
+    <div id="wrapper">
+        <div class="proName">BigRecipe</div>
+        <div class="pad">            
+            <div id="pleaseWait"></div>
+            <div id="singleTitle"></div>
+            <div id="singleImage"><img src="" id="singleImg" alt="" title="" /></div>
+            <div id="accordianContent">
+                <section class="accord">
+                    <div>
+                        <input id="sec-1" type="checkbox" checked/>
+                        <label for="sec-1">Details</label>
+                        <article class="art">
+                            <p id="title"></p>
+                        </article>
+                    </div>                              
+                    <div>
+                        <input id="sec-2" type="checkbox"/>
+                        <label for="sec-2">Ingredients</label>
+                        <article class="art">
+                            <p id="ingredients"></p>
+                        </article>
+                    </div>
+
+                    <div>
+                        <input id="sec-3" type="checkbox" />
+                        <label for="sec-3">Recipe</label>
+                        <article class="art">
+                            <p id="recipe"></p>
+                        </article>
+                    </div>           
+                </section>
+            </div>
+            <div class="clear"></div> 
+        </div>
+        <footer>© Yuvraj Solanki. All Rights Reserved.</footer>
+    </div>
+</body>
+</html>
