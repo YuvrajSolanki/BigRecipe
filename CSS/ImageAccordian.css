@@ -1,0 +1,86 @@
+﻿.main {
+    width: 550px;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.main figure {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 400px;
+    transition: all 0.3s ease-in-out;
+}
+
+.main > figure {
+    position: relative;
+    left: 0 !important;
+}
+
+.main img {
+    display: block;
+    width: 100%;
+}
+
+.main input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    cursor: pointer;            
+    opacity: 0;
+    z-index: 100;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.main input:checked{
+    width: 5px;
+    left: auto;
+    right: 0px;
+}
+
+.main input:checked ~ figure {
+    left: 400px;
+    transition: all 0.7s ease-in-out;
+}
+
+.main figcaption {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    transition: all 0.2s linear;
+} 
+
+.main figcaption span {
+    position: absolute;
+    top: 40%;
+    margin-top: -30px;
+    right: 20px;
+    left: 20px;
+    overflow: hidden;
+    text-align: center;
+    background: rgba(197, 185, 191, 0.3);
+    line-height: 20px;
+    font-size: 18px;
+    opacity: 0;
+    padding: 20px;
+    color: #fff;
+} 
+        
+.main input:checked + figcaption span {
+    transition: all 0.4s ease-in-out 0.5s;
+    opacity: 1;
+    top: 50%;
+}
+
+figure {
+    margin: 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+}

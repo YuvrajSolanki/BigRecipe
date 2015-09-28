@@ -1,0 +1,93 @@
+﻿html, body
+{
+    padding:0;
+    margin:0;
+}
+
+@media screen {
+    #wrapper {
+        margin: 0;
+        padding: 0;
+    }
+
+    .pad { 
+        padding: 10px 0px 10px 10px;      
+        background: #f2f2f3;
+   }
+}
+
+@media screen and (min-width: 920px) {
+    #wrapper {
+        width: 920px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+
+@media screen and (max-width: 919px) { wrapper { max-width: 100%; } }
+
+body { background: #535353;
+       color: #717171;
+}
+
+
+@media screen and (min-width: 920px){
+    body { font-size: 125%; } }
+
+@media screen and (min-width: 720px) and (max-width: 919px) {
+    body { font-size: 110%; } }
+
+@media screen and (min-width: 520px) and (max-width: 719px) {
+    body { font-size: 100%; } }
+
+@media screen and (min-width: 320px) and (max-width: 519px) {
+    body { font-size: 85%; } }
+
+@media screen and (max-width: 319px) {
+    body { font-size: 70%; } }
+
+
+.pageTitle
+{
+    background: #f5eacd;
+    width: 100%;    
+    color: #717171;
+    text-align: center;    
+    font-weight: 900;    
+    border: 2px solid #717171;
+    font-size: 30px;
+    padding: 5px 0px;    
+    height: auto;
+}
+
+.topic
+{ font-size: 24px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+span { margin: 5px;}
+
+.subTopic
+{ font-size: 20px;
+  font-weight: 700;
+  margin-top: 5px; 
+}
+
+a
+{
+    color: #717171;
+    text-decoration: none;    
+    cursor: pointer;
+}
+
+footer
+{
+    width: 100%;
+    max-width: 920px;
+    text-align: center;
+    position: absolute;
+    background: #f2f2f3;
+    height: 20px;
+    color: #717171;
+}

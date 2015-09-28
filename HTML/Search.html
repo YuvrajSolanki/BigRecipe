@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Search</title>
+    <link href="../Css/Documentation.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <div class="pageTitle">Search</div>
+        <div class="pad">
+            <div class="topic">Features</div>
+            <span>          
+                User can search the recipe by entering its name in the text box.<br />
+                API response contains recipes of all the items matching with that word.
+                I am returning 4 recipe's images and titles returned from it.<br /><br />
+                Then on click on the 'Recipe' button I am displaying recipe details same as in the cuisine tab<br />
+                In case of a random/wrong input I am displaying appropriate error message.<br /><br />
+                On click on the 'Recipe' button I am making an entry in a database to keep the counter of viewed
+                recipe. For the Recipe being viewed for the first time I am making an entry with its RecipeID
+                and counter equalt to 1. For already viewed recipe I am incrementing its counter by 1.
+            </span>
+            <div class="topic">Learning</div>
+            <span>
+                I have learnt to use user's input value to make an API request.<br />
+                I have learnt to indicate user's on their wrong input in search box.<br />
+                I have handled the cases of no result found and api limit reached differenly so the user will
+                know for what particular reason the output is not being generated.<br /><br />
+                I have learnt to make a web service to make entry into database on user action on html pages.<br />
+                I have used stored procedure to make entry in database table.<br />
+            </span>
+            <div class="topic">Source</div>
+            <a href="//net4.ccs.neu.edu/home/yuvi17/fileview/Default.aspx?~/Project/Javascript/Search.js" target="_blank">Search js</a><br />
+            <a href="//net4.ccs.neu.edu/home/yuvi17/fileview/Default.aspx?~/Project/Popular.asmx" target="_blank">Popular asmx</a>
+
+        </div>
+        <footer>© Yuvraj Solanki. All Rights Reserved.</footer>
+    </div>
+</body>
+</html>

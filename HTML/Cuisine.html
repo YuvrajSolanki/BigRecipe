@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Cuisine</title>
+    <link href="../Css/Documentation.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <div class="pageTitle">Cuisine</div>
+        <div class="pad">
+            <div class="topic">Features</div>
+            <span>          
+                Initially on click on the cuisine tab I am displaying italian cuisine's images returned from the API.
+                I am displaying them in an Image Accordian.<br />
+                Then on click on the mexican, indian or american cuisines I am displaying its recipes images
+                in an Image Accordian. I have displayed recipe title using the caption of the figure.<br /><br />
+                On click on the 'View Recipe' button I am displaying recipe details of the image currently
+                displaying in image accordian.
+                In recipe details I am additionally showing the rating of the recipe.<br />
+                In a tab menu of recipe details a 'Similar Video' tab will appear if there would be a video
+                from YouTube API request, otherwise won't.
+            </span>
+            <div class="topic">Learning</div>
+            <span>
+                I have learnt to make an Image accordian. It is useful to display images in a limited space.
+                And showing the glimpes of the next image so user could jump on to others if want to.<br />
+                I have learnt to use figcaption tag to show caption of the images and also learnt css transitions.<br /><br />
+                For the rating I am getting response value as a number (ie. 3,4). I have converted this text value
+                in to an image and displayed it.<br /><br />
+                I have learnt to make YouTube API request. And to integrate returned video in an iframe.<br />
+                I have set iframe's max-width to 100% and on window resizing I am setting its height to 60% of the width to make it responsive.<br />
+                As the 'Similar Video' tab should not appear when YouTube API doesn't return a video I have learnt 
+                to create dynamic css based on returned API response.
+            </span>
+            <div class="topic">Source</div>
+            <a href="//net4.ccs.neu.edu/home/yuvi17/fileview/Default.aspx?~/Project/Javascript/Cuisine.js" target="_blank">Cuisine js</a><br />
+            <a href="//net4.ccs.neu.edu/home/yuvi17/fileview/Default.aspx?~/Project/Css/ImageAccordian.css" target="_blank">Image-Accordian css</a><br />                
+        </div>
+        <footer>© Yuvraj Solanki. All Rights Reserved.</footer>
+    </div>
+</body>
+</html>

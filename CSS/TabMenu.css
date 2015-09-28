@@ -1,0 +1,74 @@
+﻿.tabMenu, .tabMenu1, .tabMenu2 , .tabMenu3 {
+    width:100%;
+    display:inline-block;
+}
+           
+.tab-links, .tab-links1, .tab-links2, .tab-links3  {    
+    display: inline-block
+}
+        
+.tab-links:after, .tab-links1:after, .tab-links2:after, .tab-links3:after {
+    display:block;
+    clear:both;
+    content:'';
+}
+
+.tab-links li, .tab-links1 li, .tab-links2 li, .tab-links3 li {
+    margin:5px 5px;
+    float:left;
+    list-style:none;            
+}
+
+.tab-links a {
+    padding:9px 15px;
+    display:inline-block;
+    border-radius:3px 3px 0px 0px;
+    background: #b6b6b6; /*grey*/
+    transition:all linear 0.15s;
+    text-decoration:none;
+    color: white;
+    font: bold;    
+}
+
+.tab-links1 a, .tab-links2 a, .tab-links3 a {
+    padding:9px 15px;
+    display:inline-block;
+    border-radius:3px 3px 0px 0px;
+    background: #f5eacd;
+    transition:all linear 0.15s;
+    text-decoration:none;
+    color: #717171;
+    font: bold;    
+}
+
+.tab-links a:hover, .tab-links1 a:hover, .tab-links2 a:hover, .tab-links3 a:hover { 
+    background: #b81d18;
+    color: white;
+    }    
+
+li.active a, li.active a:hover {    
+    background: #004687; /*blue*/
+    color: white;
+    font: bold;
+}
+
+li.active1 a, li.active1 a:hover, li.active2 a, li.active2 a:hover, li.active3 a, li.active3 a:hover {
+    background: #717171;
+    color: white;
+    font: bold;
+}  
+            
+.tab-content {
+    padding:10px;            
+    background:#fff;    
+}
+
+.tab-content1, .tab-content2, .tab-content3 {
+    padding:10px;            
+    background:#fff;  
+    color: #717171;  
+}
+
+.tab, .tab1, #wrap1, .tab2, .tab3, #wrap2, #wrap3 { display:none; }
+
+.tab.active, .tab1.active1, .tab2.active2, .tab3.active3 { display:block; }

@@ -1,0 +1,52 @@
+﻿ .accord{
+            width: 50%;
+            color: #717171;
+            float:left;
+        }
+
+        .accord label{
+            padding: 5px 20px;
+            position: relative;
+            z-index: 20;
+            display: block;
+            height: 30px;
+            color: #f5eacd;
+            line-height: 33px;
+            font-size: 19px;
+            border: 2px solid #dcd2b8;
+            cursor: pointer;
+            background: #49463d;
+        }
+
+        .accord input{ display: none; }
+        
+        .accord input:checked + label,
+        .accord input:checked + label:hover{
+            background: #f5eacd;
+            color: #49463d;
+        }
+
+        .accord article{
+            margin-top: -1px;
+            overflow: hidden;
+            height: 0px;
+            position: relative;
+            z-index: 10;
+            transition: 
+                height 0.3s ease-in-out, 
+                box-shadow 0.6s linear;
+            background: white;
+        }
+        .accord input:checked ~ article{
+            transition: 
+                height 0.5s ease-in-out, 
+                box-shadow 0.1s linear;
+            box-shadow: 0px 1px 0px 1px rgba(155,155,155,0.3);
+        }
+
+        .accord input:checked ~ article.art{ height: auto; }
+
+    .accord article p
+    {
+        margin: 5px;
+    }

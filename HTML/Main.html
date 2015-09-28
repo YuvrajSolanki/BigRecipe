@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1" />
+    <title>BigRecipe</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>    
+    <script src="Javascript/keySelector.js"></script>
+    <script src="Javascript/TabMenu.js"></script>
+    <script src="Javascript/Home.js"></script>
+    <script src="Javascript/Cuisine.js"></script>
+    <script src="Javascript/Search.js"></script>
+    <script src="Javascript/Popular.js"></script>    
+    
+    <link href="Css/Main.css" rel="stylesheet" />
+    <link href="Css/TabMenu.css" rel="stylesheet" />    
+    <link href="Css/ImageAccordian.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div id="wrapper">
+        <div class="proName">BigRecipe</div>
+        <div class="pad">            
+            <div class="tabMenu">
+                <ul class="tab-links">
+                    <li class="active"><a href="#homeTab">Home    </a></li>
+                    <li><a href="#cuisineTab" onclick="cuisine('Italian'); return false;">Cuisine </a></li>
+                    <li><a href="#searchTab">Search  </a></li>
+                    <li><a href="#mostViewedTab" onclick="getMostViewed();">Popular </a></li>
+                    <li><a href="../story/index.htm?../Project/Documentation/story.txt" target="_blank">Documentation</a></li>                    
+                </ul>
+
+                <div>
+                    <div id="homeTab" class="tab active">
+                        <div id="homeContent">
+                            <table id="homeTable">
+                        
+                            <tr class="imageRow">
+                                <td class="test"><img src="Images/breakfast.jpg" class="homeImage" id="Breakfast" alt="Breakfast" title="Breakfast">Breakfast</td>
+                                <td><img src="Images/bread.jpg" id="Bread" class="homeImage" alt="Bread" title="Bread">Bread</td>
+                                <td><img src="Images/salad.jpg" id="Salad" class="homeImage" alt="Salad" title="Salad">Salad</td>
+                                <td><img src="Images/soup.jpg" id="Soup" class="homeImage" alt="Soup" title="Soup">Soup</td>
+                            </tr>
+
+                            <tr class="imageRow">
+                                <td><img src="Images/maindish.jpg" id="Main-Dish" class="homeImage" alt="Main Dish" title="Main Dish">Main Dish</td>
+                                <td><img src="Images/sidedish.jpg" id="Side-Dish" class="homeImage" alt="Side Dish" title="Side Dish">Side Dish</td>
+                                <td><img src="Images/appetizers.jpg" id="Appetizers" class="homeImage" alt="Appetizers" title="Appetizers">Appetizer</td>
+                                <td><img src="Images/drinks.jpg" id="Drinks" class="homeImage" alt="Drinks" title="Drinks">Drink</td>
+                            </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div id="cuisineTab" class="tab">
+                        <div id="cuisineMenu">
+                            <ul>
+                                <li><a href="#" onclick="cuisine('Italian');    return false;">Italian  </a></li>
+                                <li><a href="#" onclick="cuisine('Mexican');    return false;">Mexican  </a></li>
+                                <li><a href="#" onclick="cuisine('Indian');     return false;">Indian   </a></li>
+                                <li><a href="#" onclick="cuisine('American');   return false;">American </a></li>
+                            </ul>
+                        </div> <br /><br />
+                        <div class='please_wait' align='center'>
+                            <h4><span style='color: #720000;'>Please wait...</span></h4>
+                        </div>
+
+                        <div id="imageSection">
+                            
+                            <div class="main">
+                                <figure>
+                                    <img src="" id="image1" alt="" title="" />
+                                    <input type="radio" id="1" name="radio-set" checked="checked" value="1" />
+                                    <figcaption id=""><span id="span1"></span></figcaption>
+
+                                    <figure>
+                                        <img src="" id="image2" alt="" title="" />
+                                        <input type="radio" id="Radio1" name="radio-set" value="2" />
+                                        <figcaption id="Figcaption1"><span id="span2"></span></figcaption>
+
+                                        <figure>
+                                            <img src="" id="image3" alt="" title="" />
+                                            <input type="radio" id="Radio2" name="radio-set" value="3" />
+                                            <figcaption id="Figcaption2"><span id="span3"></span></figcaption>
+
+                                            <figure>
+                                                <img src="" id="image4" alt="" title="" />
+                                                <input type="radio" id="Radio3" name="radio-set" value="4" />
+                                                <figcaption id="Figcaption3"><span id="span4"></span></figcaption>
+                                            </figure>
+                                        </figure>
+                                    </figure>
+                                </figure>
+                            </div>
+                            <div id="viewMoreButtonDiv">
+                                <button value="view more" id="viewMoreButton" class="viewMoreBtn">View Recipe</button>
+                            </div>
+
+                        </div>
+                        <hr />
+                        <span id="message"></span>
+                        <div id="wrap1">
+                            <div class="tabMenu1">
+                                <ul class="tab-links1">
+                                    <li class="active1"><a href="#titleTab">About Recipe</a></li>
+                                    <li><a href="#ingredientsTab">Ingredients</a></li>
+                                    <li><a href="#recipeTab">Recipe</a></li>
+                                    <li id="videoTitle"><a href="#videoTab">Similar Video</a></li>
+                                </ul>
+                                <div class="tab-content1">
+                                    <div id="titleTab" class="tab1 active1"></div>
+                                    <div id="ingredientsTab" class="tab1"></div>
+                                    <div id="recipeTab" class="tab1"></div>
+                                    <div id="videoTab" class="tab1"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="searchTab" class="tab">
+
+                        <div id="searchDiv">
+                            <span>What are you craving for?:</span>
+                            <input id="searchBox" type="text" />
+                            <input id="searchButton" type="submit" value="Search" class="btn btn-primary" /><span id="error" style="color: red;display: none;">please enter some value</span>
+                        </div>
+                        <div class="output"></div>
+                        <hr />
+                        <div id="wrap2">
+                            <div class="tabMenu2">
+                                <ul class="tab-links2">
+                                    <li class="active2"><a href="#titleTab2">About Recipe</a></li>
+                                    <li><a href="#ingredientsTab2">Ingredients</a></li>
+                                    <li><a href="#recipeTab2">Recipe</a></li>
+                                    <li id="videoTitle2"><a href="#videoTab2">Similar Video</a></li>
+                                </ul>
+                                <div class="tab-content2">
+                                    <div id="titleTab2" class="tab2 active2"></div>
+                                    <div id="ingredientsTab2" class="tab2"></div>
+                                    <div id="recipeTab2" class="tab2"></div>
+                                    <div id="videoTab2" class="tab2"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="mostViewedTab" class="tab">
+                        <div>
+                        <table id="popularTable">
+                            <tr class="popularRow1">
+                                <td class="popTD"><img src="" id="popular0" class="popImage" /></td>
+                                <td class="popTD"><img src="" id="popular1" class="popImage" /></td>
+                                <td class="popTD"><img src="" id="popular2" class="popImage" /></td>
+                                <td class="popTD"><img src="" id="popular3" class="popImage" /></td>
+                            </tr>
+                            <tr class="popularRow2">
+                                <td id="pop0"></td>
+                                <td id="pop1"></td>
+                                <td id="pop2"></td>
+                                <td id="pop3"></td>
+                            </tr>
+                        </table>
+                        </div>                        
+                        <hr />
+                        <div id="wrap3">
+                            <div class="tabMenu3">
+                                <ul class="tab-links3">
+                                    <li class="active3"><a href="#titleTab3">About Recipe</a></li>
+                                    <li><a href="#ingredientsTab3">Ingredients</a></li>
+                                    <li><a href="#recipeTab3">Recipe</a></li>
+                                    <li id="videoTitle3"><a href="#videoTab3">Similar Video</a></li>
+                                </ul>
+                                <div class="tab-content3">
+                                    <div id="titleTab3" class="tab3 active3"></div>
+                                    <div id="ingredientsTab3" class="tab3"></div>
+                                    <div id="recipeTab3" class="tab3"></div>
+                                    <div id="videoTab3" class="tab3"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>© Yuvraj Solanki. All Rights Reserved.</footer>
+    </div>
+</body>
+</html>

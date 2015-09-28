@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Popular</title>
+    <link href="../Css/Documentation.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="wrapper">
+        <div class="pageTitle">Popular</div>
+        <div class="pad">
+            <div class="topic">Features</div>
+            <span>          
+               Here I am displaying images and titles of the recipes which are viewed most using BigRecipe.<br />
+                Top 4 viewed recipes in search tab will appear in this popular tab.<br />
+                Search for some particular item in search tab and click on its 'recipe' button to see its recipe.<br />
+                Do it frequently and you would see that item appearing in popular tab.
+            </span>
+            <div class="topic">Learning</div>
+            <span>
+               I have learnt to use web service to fetch data from the database table and use it to make api request.<br />
+               <br /> Here I am making API request using the RecipeIDs of the top 4 viewed recipes in search tab.<br />
+                I have made these API requests using a loop. Each time user clicks on the popular tab I have to make
+                this requests.<br />
+                There would be increment of 4 images each time user clicks on Popular tab. If I empty out the html 
+                elements before each call only the last api request's response will able to create its html.<br /><br />
+                To solve this problem I have taken ids of these images in sequence. So in a loop I am setting
+                this images sources using these sequential ids. And making it clear on click on the popular tab.<br />
+                <p>$("#popular" + i).attr("src", data.Results[0].ImageURL120);</p>
+            </span>
+            <div class="topic">Source</div>
+            <a href="//net4.ccs.neu.edu/home/yuvi17/fileview/Default.aspx?~/Project/Javascript/Popular.js" target="_blank">Popular js</a><br />
+            <a href="//net4.ccs.neu.edu/home/yuvi17/fileview/Default.aspx?~/Project/Popular.asmx" target="_blank">Popular asmx</a>            
+        </div>
+        <footer>© Yuvraj Solanki. All Rights Reserved.</footer>
+    </div>
+</body>
+</html>
